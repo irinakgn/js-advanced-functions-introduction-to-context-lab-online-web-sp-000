@@ -71,7 +71,9 @@ function allWagesFor(employee){
 }
 
 function calculatePayroll(employees){
-  return employees.reduce((a))
+  return employees.reduce((totalPay, employee)=> {
+     totalPay += allWagesFor(employee)
+  })
 }
 
 function findEmployeeByFirstName(employees){
