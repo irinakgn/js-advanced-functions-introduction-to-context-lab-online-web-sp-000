@@ -61,7 +61,7 @@ function wagesEarnedOnDate(employee, day){
 function allWagesFor(employee){
 
   const payPerHour = employee.payPerHour
-  const timeIn = employee.timeInEvents.reduce((total, time)=> { total += time.hour }, 0)
+  const timeIn = employee.timeInEvents.reduce((total, time)=> { total += time.hour; return total}, 0)
   const timeOut = employee.timeOutEvents[0].hour +  employee.timeOutEvents[1].hour
   const hoursWorked = Math.abs(timeIn - timeOut)/100
   const wagesEarned =  payPerHour * hoursWorked
