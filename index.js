@@ -66,7 +66,7 @@ function allWagesFor(employee){
   const timeOut = employee.timeOutEvents.reduce((total, time)=> { total += time.hour; return total}, 0)
   const hoursWorked = Math.abs(timeIn - timeOut)/100
 
-  console.log(hoursWorked, ' ', payPerHour,  ' ',hoursWorked * employee.payPerHour)
+  console.log(hoursWorked, ' ', payPerHour,  ' ', hoursWorked * employee.payPerHour)
   const wagesEarned =  payPerHour * hoursWorked
 
   return  wagesEarned
