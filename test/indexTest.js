@@ -186,7 +186,7 @@ describe("The payroll system", function () {
     })
 
     describe("calculatePayroll", function () {
-      it.only("calculates that the employees earned 770 dollars", function () {
+      it("calculates that the employees earned 770 dollars", function () {
         let rRecord = createEmployeeRecord(["Rafiki", "", "Aide", 10])
         let sRecord = createEmployeeRecord(["Simba", "", "King", 100])
 
